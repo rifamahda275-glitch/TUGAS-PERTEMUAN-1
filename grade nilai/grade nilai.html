@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Grade Nilai</title>
+    
+</head>
+<body>
+
+    <h2>Daftar Nilai dan Grade</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nilai</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody id="tabel-hasil">
+            <!-- Hasil dari JavaScript akan dimasukkan di sini -->
+        </tbody>
+    </table>
+
+    <script>
+        let nilai = [75, 45, 90, 50, 65];
+        let tabelBody = document.getElementById("tabel-hasil");
+
+        for (let i = 0; i < nilai.length; i++) {
+            let grade;
+
+            if (nilai[i] >= 85) {
+                grade = "A";
+            } else if (nilai[i] >= 75) {
+                grade = "B";
+            } else if (nilai[i] >= 65) {
+                grade = "C";
+            } else if (nilai[i] >= 50) {
+                grade = "D";
+            } else {
+                grade = "E";
+            }
+
+            // Output ke Konsol Browser
+            console.log("Nilai: " + nilai[i] + " | Grade: " + grade);
+
+            // Output ke Tampilan HTML (Tabel)
+            let baris = `<tr>
+                <td>${nilai[i]}</td>
+                <td>${grade}</td>
+            </tr>`;
+            tabelBody.innerHTML += baris;
+        }
+    </script>
+
+</body>
+</html>

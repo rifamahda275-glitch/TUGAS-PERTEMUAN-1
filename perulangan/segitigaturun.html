@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segitiga Turun</title>
+</head>
+<body>
+
+    <h2>2. Segitiga Turun</h2>
+    <pre id="segitigaTurun"></pre>
+
+    <script>
+        let hasil = "";
+
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                hasil += "*";
+            }
+            hasil += "\n";
+        }
+
+        document.getElementById("segitigaTurun").textContent = hasil;
+    </script>
+
+</body>
+</html>
